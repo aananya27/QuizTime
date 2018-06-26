@@ -16,30 +16,44 @@ class ViewController: UIViewController {
     //variables
     var currentQues = 0
     var correctAnsPlace:UInt32 = 0 //tracks where the right answer is
+    var score = 0
     
     
-    //MARK: Label
+    //MARK: Labels
     @IBOutlet weak var lbl: UILabel!
+    
+    @IBOutlet weak var Result: UILabel!
+    
+    //MARK: ScoreLabel
+  
     
     //MARK: Buttons
     @IBAction func action(_ sender: Any)
     {
         if ((sender as AnyObject).tag == Int(correctAnsPlace)){
-            print("Right!")
+            Result.text = "Correct!"
+            score += 1
         }
         else{
-            print("Wrong!!!!!")
+            Result.text = "Wrong!!!!!!!"
+            
         }
         
         if (currentQues != questions.count){
             showNewQuestion()
         }
+        else{
+            performSegue(withIdentifier: "ScoreBoard", sender: self)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         showNewQuestion()
+    //    showScore
     }
-    
+  //  func showScore() {
+        // scorelbl.text = score
+  //  }
     func showNewQuestion()
     {
         lbl.text = questions[currentQues]
