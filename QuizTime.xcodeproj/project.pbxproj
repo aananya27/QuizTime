@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315F2CB7C20A070433CF5A95 /* Pods_QuizTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB7CBE02B086B099CAAD79F4 /* Pods_QuizTime.framework */; };
 		D4410A4E20E14D1300CD40DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4410A4D20E14D1300CD40DC /* AppDelegate.swift */; };
 		D4410A5020E14D1300CD40DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4410A4F20E14D1300CD40DC /* ViewController.swift */; };
 		D4410A5320E14D1300CD40DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4410A5120E14D1300CD40DC /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8666397614BE9759FFA5EACB /* Pods-QuizTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuizTime/Pods-QuizTime.release.xcconfig"; sourceTree = "<group>"; };
+		9D2191FDB502ECF8EAD62825 /* Pods-QuizTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuizTime/Pods-QuizTime.debug.xcconfig"; sourceTree = "<group>"; };
 		D4410A4A20E14D1300CD40DC /* QuizTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4410A4D20E14D1300CD40DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4410A4F20E14D1300CD40DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D4410A5720E14D1400CD40DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4410A5920E14D1400CD40DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D457291920E6524E00075B00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB7CBE02B086B099CAAD79F4 /* Pods_QuizTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuizTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315F2CB7C20A070433CF5A95 /* Pods_QuizTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B43A79ECFF0ADEB834FE879 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D2191FDB502ECF8EAD62825 /* Pods-QuizTime.debug.xcconfig */,
+				8666397614BE9759FFA5EACB /* Pods-QuizTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4410A4120E14D1300CD40DC = {
 			isa = PBXGroup;
 			children = (
 				D4410A4C20E14D1300CD40DC /* QuizTime */,
 				D4410A4B20E14D1300CD40DC /* Products */,
+				3B43A79ECFF0ADEB834FE879 /* Pods */,
+				F99E52A94B834190223A39A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = QuizTime;
 			sourceTree = "<group>";
 		};
+		F99E52A94B834190223A39A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB7CBE02B086B099CAAD79F4 /* Pods_QuizTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4410A5C20E14D1400CD40DC /* Build configuration list for PBXNativeTarget "QuizTime" */;
 			buildPhases = (
+				BBE91D4EB28DF97EDDCD0835 /* [CP] Check Pods Manifest.lock */,
 				D4410A4620E14D1300CD40DC /* Sources */,
 				D4410A4720E14D1300CD40DC /* Frameworks */,
 				D4410A4820E14D1300CD40DC /* Resources */,
+				835F6D23FB56A4FA723602CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +159,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		835F6D23FB56A4FA723602CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuizTime/Pods-QuizTime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuizTime/Pods-QuizTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE91D4EB28DF97EDDCD0835 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuizTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4410A4620E14D1300CD40DC /* Sources */ = {
@@ -282,6 +347,7 @@
 		};
 		D4410A5D20E14D1400CD40DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D2191FDB502ECF8EAD62825 /* Pods-QuizTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +366,7 @@
 		};
 		D4410A5E20E14D1400CD40DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8666397614BE9759FFA5EACB /* Pods-QuizTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
