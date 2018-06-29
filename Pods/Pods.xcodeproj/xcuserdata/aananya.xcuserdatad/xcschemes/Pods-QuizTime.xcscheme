@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E45E55656067AE04DC24BE595CBD9F0"
+               BlueprintIdentifier = "A2C80116ACEC3B6AB0C618C9684677DF"
                BlueprintName = "Pods-QuizTime"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "Pods-QuizTime.framework">
