@@ -12,6 +12,7 @@
 		D4410A5320E14D1300CD40DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4410A5120E14D1300CD40DC /* Main.storyboard */; };
 		D4410A5520E14D1400CD40DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4410A5420E14D1400CD40DC /* Assets.xcassets */; };
 		D4410A5820E14D1400CD40DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4410A5620E14D1400CD40DC /* LaunchScreen.storyboard */; };
+		D457291A20E6524E00075B00 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D457291920E6524E00075B00 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D4410A5420E14D1400CD40DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4410A5720E14D1400CD40DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4410A5920E14D1400CD40DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D457291920E6524E00075B00 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D4410A5120E14D1300CD40DC /* Main.storyboard */,
 				D4410A5420E14D1400CD40DC /* Assets.xcassets */,
 				D4410A5620E14D1400CD40DC /* LaunchScreen.storyboard */,
+				D457291920E6524E00075B00 /* GoogleService-Info.plist */,
 				D4410A5920E14D1400CD40DC /* Info.plist */,
 			);
 			path = QuizTime;
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4410A5820E14D1400CD40DC /* LaunchScreen.storyboard in Resources */,
+				D457291A20E6524E00075B00 /* GoogleService-Info.plist in Resources */,
 				D4410A5520E14D1400CD40DC /* Assets.xcassets in Resources */,
 				D4410A5320E14D1300CD40DC /* Main.storyboard in Resources */,
 			);
