@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
-    //Static Questions and answers
+    //to create  a connection to realtime databse
+    let rootRef = FIRDatabase.database().refrence()
+    //now to connect to the firebase database:
+    ////////////////////////
+    
+    //Static Questions and answers for now
     let questions = ["2+7?","1+2?","20+20?"]
     let answers = [["9","27","55"],["3","12","15"],["40","60","99"]]
     
@@ -19,23 +25,17 @@ class ViewController: UIViewController {
     var score = 0
     
     
-    //MARK: Labels
+    //MARK: Label to show question
     @IBOutlet weak var lbl: UILabel!
-    
-    @IBOutlet weak var Result: UILabel!
-    
-    //MARK: ScoreLabel
-  
-    
-    //MARK: Buttons
+    //MARK: Buttons for answers
     @IBAction func action(_ sender: Any)
     {
         if ((sender as AnyObject).tag == Int(correctAnsPlace)){
-            Result.text = "Correct!"
+            print("Correct!")
             score += 1
         }
         else{
-            Result.text = "Wrong!!!!!!!"
+            print("Wrong!!!!!!!")
             
         }
         
@@ -47,13 +47,33 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        showNewQuestion()
-    //    showScore
+    
+    // touching this result button should send the score to fb..which send it back into the app.
+    @IBAction func resultDidTouch(_ sender: Any) {
+        //if the result button is tapped.
     }
-  //  func showScore() {
-        // scorelbl.text = score
-  //  }
+    
+    //result label -where it will show the result-throug fB^
+    @IBOutlet weak var showResult: UILabel!
+    
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //to show questions when view appears.
+        showNewQuestion()
+        super.viewDidAppear(animated)
+        
+        //firebase connect
+        let resultRef = rootRef.child("showResult")
+        //showResult being the key after the root, in the FB dB.
+        
+        resultRef.observeEventType(.Value){
+            (snap: FIRDataSnapshot) in
+            self.showResult.text = snap.value?.description
+        }
+    }
+  
+    //function to randomly sow qns and ans butons
     func showNewQuestion()
     {
         lbl.text = questions[currentQues]
