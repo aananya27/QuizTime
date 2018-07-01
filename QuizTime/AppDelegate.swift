@@ -10,12 +10,16 @@ import UIKit
 //ADD THIS line
 import Firebase
 
+//import FirebaseStorage
+import FirebaseAnalytics
+import FirebaseDatabase
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     override init() {
-        FIRApp.configure()
+        FirebaseApp.configure()
     }
     
 

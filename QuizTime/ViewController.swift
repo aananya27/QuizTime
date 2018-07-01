@@ -7,11 +7,16 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
+
+//import FirebaseStorage
+import FirebaseAnalytics
+import FirebaseDatabase
+
 
 class ViewController: UIViewController {
     //to create  a connection to realtime databse
-    let rootRef = FIRDatabase.database().refrence()
+    let rootRef = Database.database().reference()
     //now to connect to the firebase database:
     ////////////////////////
     
@@ -67,9 +72,9 @@ class ViewController: UIViewController {
         let resultRef = rootRef.child("showResult")
         //showResult being the key after the root, in the FB dB.
         
-        resultRef.observeEventType(.Value){
-            (snap: FIRDataSnapshot) in
-            self.showResult.text = snap.value?.description
+        resultRef.observe(.value){
+            (snap: DataSnapshot) in
+            self.showResult.text = (snap.value as AnyObject).description
         }
     }
   

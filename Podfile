@@ -8,8 +8,8 @@
   # Pods for QuizTime
 target 'QuizTime' do
 
-pod 'Firebase'
-pod 'Firebase/Database'
-
+ pod 'Firebase/Core'
+ pod 'Firebase/Database'
+ pod 'Firebase/Auth'
 
 end
