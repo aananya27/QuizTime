@@ -8,17 +8,17 @@
 
 import UIKit
 //import Firebase
-
 //import FirebaseStorage
 import FirebaseAnalytics
 import FirebaseDatabase
 
-
 class ViewController: UIViewController {
     //firebase connect
     let resultRef = Database.database().reference().child("showResult")
+    //TRYTHISTOMMOROW: let questionRef = Database.database().reference().child("showQuestion").child("questions")
     
     //Static Questions and answers for now
+    //up on db:
     let questions = ["2+7?","1+2?","20+20?"]
     let answers = [["9","27","55"],["3","12","15"],["40","60","99"]]
     
@@ -53,6 +53,7 @@ class ViewController: UIViewController {
     
     
     // touching this result button should send the score to fb..which send it back into the app.
+    //fix this LATER - as in the result isnt fetched, it is a realtime thing..so ...fix it maybe or remove this..but then idk how we get the setvalue thing.
     @IBAction func resultDidTouch(_ sender: Any) {
         //if the result button is tapped.
         resultRef.setValue(score)
