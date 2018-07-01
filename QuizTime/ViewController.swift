@@ -15,10 +15,8 @@ import FirebaseDatabase
 
 
 class ViewController: UIViewController {
-    //to create  a connection to realtime databse
-    let rootRef = Database.database().reference()
-    //now to connect to the firebase database:
-    ////////////////////////
+    //firebase connect
+    let resultRef = Database.database().reference().child("showResult")
     
     //Static Questions and answers for now
     let questions = ["2+7?","1+2?","20+20?"]
@@ -48,7 +46,8 @@ class ViewController: UIViewController {
             showNewQuestion()
         }
         else{
-            performSegue(withIdentifier: "ScoreBoard", sender: self)
+            //performSegue(withIdentifier: "ScoreBoard", sender: self)
+            resultDidTouch(self)
         }
     }
     
@@ -56,6 +55,7 @@ class ViewController: UIViewController {
     // touching this result button should send the score to fb..which send it back into the app.
     @IBAction func resultDidTouch(_ sender: Any) {
         //if the result button is tapped.
+        resultRef.setValue(score)
     }
     
     //result label -where it will show the result-throug fB^
@@ -68,8 +68,6 @@ class ViewController: UIViewController {
         showNewQuestion()
         super.viewDidAppear(animated)
         
-        //firebase connect
-        let resultRef = rootRef.child("showResult")
         //showResult being the key after the root, in the FB dB.
         
         resultRef.observe(.value){
@@ -100,6 +98,10 @@ class ViewController: UIViewController {
             
         }
         currentQues += 1
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {

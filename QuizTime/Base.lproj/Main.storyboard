@@ -68,7 +68,7 @@
                                 <rect key="frame" x="48" y="540" width="105" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Show Result">
+                                <state key="normal" title="Your Result 👉🏻">
                                     <color key="titleColor" red="0.97357933640000005" green="0.99126928859999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
