@@ -88,7 +88,6 @@
                     </view>
                     <connections>
                         <outlet property="lbl" destination="zRK-jj-5l3" id="nPy-pm-F7c"/>
-                        <outlet property="resultDidTouch" destination="eH8-aB-Dyf" id="Ore-k4-qh8"/>
                         <outlet property="showResult" destination="xlx-Ka-Atb" id="HW6-1s-Wch"/>
                     </connections>
                 </viewController>
